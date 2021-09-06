@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home page</title>
+  </head>
+  <body>
+    <h1>Anime recommendation</h1>
+    <form action="{% url 'result' %}">
+      {% csrf_token %}
+      
+      <p>Favourite Anime:</p>
+      <input type="text" name="fav_anime">
+      <br>
+
+      <input type="submit" value='Get Predictions'>
+    </form>
+  </body>
+</html>
+
